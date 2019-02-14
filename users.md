@@ -1,0 +1,3 @@
+## Użytkownicy
+
+`$ adduser <user>`
