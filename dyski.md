@@ -64,3 +64,12 @@ Patrycja rozszerzona musi mieć o 100MB więcej na obsługe
 
 - `z` - z GPT do DOSa
 
+
+
+
+
+## Pytania
+
+- [ ] `/dev/null`
+- [ ] `/dev/rdisk`
+
