@@ -72,4 +72,4 @@ Patrycja rozszerzona musi mieć o 100MB więcej na obsługe
 
 - [ ] `/dev/null`
 - [ ] `/dev/rdisk`
-
+- [ ] `dd`
