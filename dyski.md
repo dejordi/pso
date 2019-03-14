@@ -61,15 +61,77 @@ Patrycja rozszerzona musi mieć o 100MB więcej na obsługe
 ## gdisk - GPT fdisk
 
 - `x` - tryb zaawansowany
-
 - `z` - z GPT do DOSa
 
 
 
+## Instalacja przy błędzie!!!
+
+Jak jest błąd przy instalacji to:
+
+```bash
+sudo rm /var/lib/dkpg/lock
+sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+```
+
+I powtarzać to do skutku, czasami może jeszcze zadziałać po `sudo apt update`
 
 
-## Pytania
 
-- [ ] `/dev/null`
-- [ ] `/dev/rdisk`
-- [ ] `dd`
+## Mount
+
+`mount` - wyświetlanie wszystkich zamontowanych dysków
+
+
+
+## gparted
+
+Fajny program z GUI, trzeba zapisać zmiany 
+
+partycja > utwórz tablice partycji
+
+
+
+## mkfs
+
+Trzeba odmontować najpierw dysk!!! (`umount`)
+
+```bahs
+sudo mkfs /dev/sdb[1-128]
+# Jeśli GPT - kontynuujemy
+
+
+$ mkfs.ext # wyświetla dostępne systemy plików ext
+
+$ sudo mkfs.ext4 -L "zsk" /dev/sdb1 #tworzenie ext4 na /dev/sdb1 z labelem "zsk"
+
+$ sudo mkfs.ntfs /dev/sdb2
+
+$ sudo mkfs.vfat # lub po prostu fat
+
+$ sudo apt install exfat-utils
+$ sudo mkfs.exfat /dev/sdb4
+```
+
+
+
+## parted
+
+```bash
+print - wyświetlenie partycji
+print all - wyświetlenie wszystkich dysków
+
+select /dev/sdb - wybranie dysku (jak SQL)
+
+```
+
+
+
+
+
+##  Pytania
+
+- [ ] <s>`/dev/null`</s> - nie wiadomo
+
+- [x] `dd` - diskdump jest najlepszą opcją
