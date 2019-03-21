@@ -75,6 +75,8 @@ sudo rm /var/lib/apt/lists/lock
 sudo rm /var/cache/apt/archives/lock
 ```
 
+Protip: `sudo find /var -name lock` żeby znaleźć te pliki jak się zapomni
+
 I powtarzać to do skutku, czasami może jeszcze zadziałać po `sudo apt update`
 
 
@@ -108,7 +110,7 @@ $ sudo mkfs.ext4 -L "zsk" /dev/sdb1 #tworzenie ext4 na /dev/sdb1 z labelem "zsk"
 
 $ sudo mkfs.ntfs /dev/sdb2
 
-$ sudo mkfs.vfat # lub po prostu fat
+$ sudo mkfs.vfat # fat32
 
 $ sudo apt install exfat-utils
 $ sudo mkfs.exfat /dev/sdb4
