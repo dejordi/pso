@@ -99,7 +99,7 @@ partycja > utwórz tablice partycji
 
 Trzeba odmontować najpierw dysk!!! (`umount`)
 
-```bahs
+```bash
 sudo mkfs /dev/sdb[1-128]
 # Jeśli GPT - kontynuujemy
 
