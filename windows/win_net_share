@@ -1,0 +1,25 @@
+## Udostępnianie katalogu Windows 
+
+`net share`  — wywołanie funkcji **udostępnione**
+
+`net share "nazwa_przydziału"="scieżka"` 
+
+`whoami` — nazwa klienta
+
+> win + r 
+> \\\\"ścieżka_dostępu_folderu_shared"
+
+`net share "ścieżka" /del` — usuwanie folderu
+
+> odłączanie robimy manualnie z poziomu GUI
+
+`net share "nazwa_udziału" /user:10` — ustawianie ograniczenia użytkowników na *"10"*
+
+### Uprawnienia:
+
+`net share "nazwa_udziału"="ścieżka" /grant:wszyscy,FULL /grant:zsk,READ` — uprawnienia all dla wszystkich, odczyt dla grupy zsk
+
+> uwaga na język systemu 
+> np. everyone = wszyscy
+
+> Uwaga na uprawnienia sieciowe, a na uprawnienia zwykłe!
